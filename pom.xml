@@ -23,4 +23,22 @@
             <version>3.12.0</version>
         </dependency>
     </dependencies>
+
+    <build>
+        <plugins>
+            <plugin> <!-- Selecciono el plugin de clean-->
+                <artifactId>maven-clean-plugin</artifactId>
+                <version>3.1.0</version>
+                <executions>
+                    <execution>
+                        <id>clean-inicial</id> <!-- Creo una ejecucion -->
+                        <phase>initialize</phase><!-- Cuando se usa la fase initialize -->
+                        <goals><!-- Ejecuto estos goals del plugin -->
+                            <goal>clean</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
 </project>
